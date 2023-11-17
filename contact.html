@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TastyBites | Contact</title>
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a8da778513.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-menu">
+        <label for="hamburger-menu" class="hamburger_icon"
+          ><i class="fas fa-bars fa-2xl"></i
+        ></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="brand-name"><h1>TastyBites</h1></div>
+    </header>
+    <main>
+      <div class="headerimg-contact">
+        <img class="images" alt="" />
+      </div>
+      <section class="box">
+        <div class="textspace">
+          <p>Get in touch with TastyBites.</p>
+          <p>
+            Have a question, suggestion, or simply want to talk food with us?
+            We'd love to hear from you! Feel free to reach out using your
+            preferred method.
+          </p>
+        </div>
+        <fieldset>
+          <form id="containerForm">
+            <div>
+              <label
+                >Name
+                <input name="name" id="name" />
+              </label>
+              <div class="form-error" id="nameError">Enter your name</div>
+            </div>
+            <div>
+              <label>
+                Email
+                <input name="email" id="email" />
+              </label>
+              <div class="form-error" id="emailError">
+                Enter your email address
+              </div>
+            </div>
+            <div>
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" />
+              <div class="form-error" id="subjectError">
+                Enter atleast 15 letters
+              </div>
+            </div>
+
+            <div>
+              Message
+              <textarea
+                name="textarea"
+                rows="5"
+                cols="30"
+                minlength="15"
+                id="textarea"
+              >
+Your message here....</textarea
+              >
+              <div class="form-error" id="textareaError">
+                Enter atleast 25 letters
+              </div>
+            </div>
+            <button class="submit_button">Submit</button>
+          </form>
+        </fieldset>
+        <div class="textspace">
+          <p>
+            If you prefer to reach us online, you can also use the contact form
+            below. We'll get back to you as soon as possible.
+          </p>
+          <p>phone <a href="tel">999999999</a></p>
+          <p>emale <a href="email">exsampte@something.com</a></p>
+          <p>
+            We're here to assist you, so don't hesitate to get in touch. Let's
+            keep the conversation about food going!
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="/js/contact.js"></script>
+  </body>
+</html>

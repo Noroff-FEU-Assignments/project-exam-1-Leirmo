@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+a,
+p {
+  font-family: "Lobster";
+}
+
+header {
+  position: relative;
+  background-color: #228b22;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 105px;
+}
+
+header a {
+  padding: 15px;
+  font-size: 40px;
+  display: block;
+  text-decoration: none;
+  color: #ffd700;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  position: absolute;
+  background-color: #228b22;
+  top: 104px;
+  padding: 0px;
+  width: 100%;
+  left: 0;
+}
+
+header nav {
+  padding: 0;
+}
+
+nav,
+#hamburger.menu {
+  display: none;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+.hamburger_icon {
+  display: block;
+  padding-left: 10px;
+  color: #ffd700;
+}
+
+.brand-name {
+  font-size: 30px;
+  color: #ffd700;
+  position: relative;
+  text-align: center;
+  padding-right: 30px;
+}
+
+@media (min-width: 1130px) {
+  .hamburger_icon {
+    display: none;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  header a {
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  nav {
+    display: block;
+    position: relative;
+    top: 0;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+  .brand-name {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1390px) {
+  .hamburger_icon {
+    display: none;
+  }
+
+  header {
+    justify-content: space-around;
+  }
+
+  header a {
+    padding: 10px;
+    font-size: 35px;
+  }
+  nav {
+    display: block;
+    position: relative;
+    top: 0;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+  .brand-name {
+    font-size: 30px;
+    padding-right: 0;
+  }
+}
+
+/*Home Page*/
+main {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.welcome-section {
+  border-top: solid;
+  border-left: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  padding: 50px;
+}
+
+.welcome {
+  text-align: start;
+}
+
+.welcome h1 {
+  text-align: center;
+}
+
+.box {
+  border-top: solid;
+  border-left: solid;
+  display: grid;
+  padding: 50px;
+  margin: 30px;
+}
+
+.carusel-section {
+}
+
+.product {
+  background-color: #1c8013;
+  padding: 50px;
+}
+
+/*Contact*/
+.headerimg-contact {
+  background-image: url(/images/Pi7_Image_jason-briscoe-7MAjXGUmaPw-unsplash.jpg);
+  width: 100%;
+  height: 300px;
+  background-position: center -150px;
+  background-repeat: no-repeat;
+}
+
+.textspace {
+  max-width: 630px;
+  margin: 0 auto;
+}
+
+#containerForm {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: none;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #d9d9d9;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  margin-bottom: 20px;
+}
+
+/*About*/
+.headerimg-about {
+  background-image: url(/images/Pi7_Image_abdalla-m-Lmv0Y9qIABc-unsplash.jpg);
+  width: 100%;
+  height: 300px;
+  background-position: center -150px;
+  background-repeat: no-repeat;
+  margin-top: -65px;
+}
+
+.about-section {
+  margin: 50px auto;
+  padding: 50px;
+  border-top: solid;
+  border-left: solid;
+  max-width: 1000px;
+}
