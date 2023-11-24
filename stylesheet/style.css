@@ -13,6 +13,28 @@ p {
   font-family: "Lobster";
 }
 
+h2,
+p {
+}
+
+a {
+  cursor: pointer;
+}
+
+.cta {
+  background: none;
+  border: none;
+  font-family: lobster;
+  font-size: larger;
+  text-decoration: none;
+  color: #000;
+}
+
+.cta:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 header {
   position: relative;
   background-color: #228b22;
@@ -162,6 +184,7 @@ main {
   align-items: center;
   max-width: 700px;
   padding: 50px;
+  margin-top: 50px;
 }
 
 .welcome {
@@ -173,6 +196,7 @@ main {
 }
 
 .box {
+  width: 700px;
   border-top: solid;
   border-left: solid;
   display: grid;
@@ -183,9 +207,30 @@ main {
 .carusel-section {
 }
 
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.products a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .product {
-  background-color: #1c8013;
-  padding: 50px;
+  background: #228b22;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.products img {
+  width: 100%;
+  max-height: 200px;
+}
+
+.container p {
+  color: #000;
 }
 
 /*Contact*/
@@ -242,4 +287,37 @@ textarea {
   border-top: solid;
   border-left: solid;
   max-width: 1000px;
+}
+
+.about-section p {
+  color: #000;
+}
+
+/*Product Page*/
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container h1 {
+  justify-content: center;
+  text-align: center;
+}
+
+.container p {
+  text-align: start;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #000;
+  padding-bottom: 20px;
+}
+
+.container img {
+  background-image: url(/images/Pi7_Image_abdalla-m-Lmv0Y9qIABc-unsplash.jpg);
+  width: 100%;
+  height: 300px;
+  background-position: center -150px;
+  background-repeat: no-repeat;
 }
