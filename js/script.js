@@ -42,3 +42,33 @@ loadMoreButton.addEventListener("click", loadMore);
 loadMoreButton.style.display = "none";
 
 initializePage();
+
+document.querySelectorAll(".carousel").forEach((carousel) => {
+  const items = carousel.querySelectorAll(".carousel-item");
+
+  const buttonsHtml = Array.from(items, () => {
+    return `<span class="carousel-button"></span>`;
+  });
+
+  carousel.insertAdjacentHTML(
+    "beforeend",
+    `
+    <div class="carousel-nav">
+    ${buttonsHtml.join("")}
+    </div>
+    `
+  );
+  const buttons = carousel.querySelectorAll(".carousel-button");
+
+  buttons.forEach((button, i) => {
+    button.addEventListener("click", () => {
+      items.forEach((item) => item.classList.remove("carousel-active"));
+      buttons.forEach((button) => button.classList.remove("button-active"));
+      items[i].classList.add("carousel-active");
+      button.classList.add("button-active");
+    });
+  });
+
+  items[0].classList.add("carousel-active");
+  buttons[0].classList.add("button-active");
+});

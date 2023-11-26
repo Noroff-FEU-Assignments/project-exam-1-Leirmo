@@ -204,7 +204,58 @@ main {
   margin: 30px;
 }
 
-.carusel-section {
+.carousel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-item {
+  height: 400px;
+  width: 700px;
+  background-color: #228b22;
+  padding: 1em;
+  display: none;
+  border-radius: 10px;
+}
+
+img {
+  height: 200px;
+  width: 700px;
+  border-radius: 10px;
+}
+
+.carousel-nav {
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel-active {
+  display: block;
+}
+
+.carousel-button {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.button-active {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .products {
@@ -238,8 +289,9 @@ main {
   background-image: url(/images/Pi7_Image_jason-briscoe-7MAjXGUmaPw-unsplash.jpg);
   width: 100%;
   height: 300px;
-  background-position: center -150px;
+  background-position: center;
   background-repeat: no-repeat;
+  margin-top: 100px;
 }
 
 .textspace {
