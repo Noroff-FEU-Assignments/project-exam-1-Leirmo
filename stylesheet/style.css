@@ -3,6 +3,9 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -174,6 +177,7 @@ main {
   height: 100vh;
   display: grid;
   place-items: center;
+  flex: 1;
 }
 
 .welcome-section {
@@ -184,7 +188,7 @@ main {
   align-items: center;
   max-width: 700px;
   padding: 50px;
-  margin-top: 50px;
+  margin: 50px;
 }
 
 .welcome {
@@ -196,39 +200,45 @@ main {
 }
 
 .box {
-  width: 700px;
+  max-width: 100vh;
   border-top: solid;
   border-left: solid;
   display: grid;
-  padding: 50px;
-  margin: 30px;
+  padding: 7px;
+  margin: 70px;
 }
 
 .carousel-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 700px;
+  width: 40%;
 }
 
 .carousel {
   position: relative;
   width: 100%;
+  color: #fff;
 }
 
 .carousel-item {
-  height: 400px;
-  width: 700px;
+  height: 450px;
+  width: 100%;
   background-color: #228b22;
-  padding: 1em;
+  padding: 10px 15px 0 0;
   display: none;
   border-radius: 10px;
+  text-align: center;
 }
 
 img {
   height: 200px;
-  width: 700px;
+  width: 90%;
   border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  object-fit: cover;
 }
 
 .carousel-nav {
@@ -242,6 +252,9 @@ img {
 
 .carousel-active {
   display: block;
+}
+.carousel button {
+  padding-left: 560px;
 }
 
 .carousel-button {
@@ -284,14 +297,24 @@ img {
   color: #000;
 }
 
+@media (min-width: 1130px) {
+  .box {
+    max-width: 700px;
+    border-top: solid;
+    border-left: solid;
+    display: grid;
+    padding: 30px;
+    margin: 70px;
+  }
+}
+
 /*Contact*/
 .headerimg-contact {
-  background-image: url(/images/Pi7_Image_jason-briscoe-7MAjXGUmaPw-unsplash.jpg);
+  background-image: url(/images//Pi7_Image_jason-briscoe-7MAjXGUmaPw-unsplash.jpg);
   width: 100%;
   height: 300px;
-  background-position: center;
+  background-position: center -150px;
   background-repeat: no-repeat;
-  margin-top: 100px;
 }
 
 .textspace {
@@ -372,4 +395,57 @@ textarea {
   height: 300px;
   background-position: center -150px;
   background-repeat: no-repeat;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90vh;
+  max-height: 90vh;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  background-color: #228b22;
+  height: 200px;
+  flex-direction: column;
+  color: #ffd700;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.follow_content {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+  width: 300px;
+  padding: 20px 0px 0px 50px;
+}
+
+.follow_content a i {
+  margin-bottom: 20px;
 }
